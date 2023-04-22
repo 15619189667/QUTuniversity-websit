@@ -1,0 +1,804 @@
+@charset "utf-8";
+
+* {
+	padding: 0;
+	margin: auto;
+}
+
+body {
+	min-width: 700px;
+	/* 窗口宽度小于700px时显示滚动条，否则自适应宽度 */
+	transform-style: preserve-3d;
+	perspective: 500px;
+	background-color: #FF9A8B;
+	background-image: linear-gradient(90deg, #ffffff 0%, #f77f81 55%, #ffffff 100%);
+}
+
+/* 设置网页字体 */
+a {
+	font-size: 0.987vw;
+}
+
+/* 字体覆盖事件 */
+a:hover {
+	background-color: darksalmon;
+}
+
+#header {
+	height: 735px;
+}
+
+/* 黑色导航栏 */
+.nav1 {
+	color: #FFFFFF;
+	width: 100%;
+	height: 40px;
+	background: black;
+	display: flex;
+	align-items: center;
+	/*设置元素垂直居中*/
+}
+
+/* 时间显示位置 */
+#clock {
+	position: absolute;
+	left: 11vw;
+}
+
+
+/* 黑导航栏右侧列表位置 */
+.a1 {
+	height: 40px;
+	list-style-type: none;
+	position: absolute;
+	left: 63vw;
+	text-align: center;
+}
+
+/*黑色导航栏中字体*/
+.a1 a {
+	color: #FFFFFF;
+	line-height: 30px;
+	width: 5vw;
+	text-align: center;
+}
+
+.a1 a:hover {
+	background-color: #000000;
+}
+
+/* 黑导航栏中右侧列表*/
+.a1 li {
+	float: right;
+	height: 30px;
+	width: 5.2vw;
+	border-right: #ffffff solid 2px;
+}
+
+
+/* 黑色导航栏下拉列表 */
+.ul0 {
+	margin-top: 3px;
+	display: none;
+	/* 默认不显示 */
+	list-style: none;
+}
+
+/* 悬停鼠标显示下拉列表 */
+.a1 li:hover .ul0 {
+	display: block;
+}
+
+/* 下拉列表中字体 */
+.ul0 li {
+	background-color: #000000;
+	color: #FFFFFF;
+	height: 40px;
+	width: 5.27vw;
+	line-height: 40px;
+	text-align: center;
+	border-right: #000000;
+}
+
+/* 红色导航栏第2项覆盖显示列表覆盖事件 */
+.a1 .ul0 li:hover {
+	background-color: #6600ba;
+}
+
+
+/* 导航图片 */
+.logo1 {
+	height: 140px;
+	width: 100%;
+	background-color: #760707;
+	background: url(tu1.png) no-repeat;
+	background-size: cover;
+}
+
+/* 搜索栏 */
+.search input {
+	color: #FFFFFF;
+	position: relative;
+	top: 55px;
+	left: 84vw;
+	width: 8.559vw;
+	height: 23px;
+	border: 0.065833vw;
+	background: none;
+}
+
+/* 鼠标悬停显示搜索框 */
+.search input:hover {
+	border: 0.13166557vw solid;
+}
+
+
+/* 红色导航栏 */
+.nav2 {
+	display: flex;
+	align-items: center;
+	/* 设置表格居中 */
+	background: #5f1212;
+	height: 45px;
+}
+
+/* 红色导航栏中字体 */
+.nav2 a {
+	color: #FFFFFF;
+	line-height: 45px;
+	/*  设置行高 */
+	height: 30px;
+	width: 5.9vw;
+	text-decoration: none;
+	/* 去掉下划线 */
+	margin-left: 20%;
+	text-align: center;
+}
+
+/* 红色导航栏中列表*/
+.nav2 ul li {
+	width: 6.51vw;
+	float: left;
+	border-right: #000000 solid 1px;
+	/* 设置列表项间隔线 */
+	list-style-type: none;
+	/*  去除小圆点 */
+}
+
+/* 红色导航栏覆盖变色 */
+.nav2 li:hover,
+.nav2 li a:hover {
+	background-color: #8a2020;
+}
+
+/* 红色导航栏第2项覆盖显示列表 */
+.nav2 li:hover .ul1 {
+	display: block;
+}
+
+.nav2 li:hover .ul11 {
+	display: block;
+}
+
+/* 红色导航栏下拉列表 */
+.ul1,
+.ul11 {
+	display: none;
+	/* 默认不显示 */
+	list-style: none;
+}
+
+/* 下拉列表中字体 */
+.ul1 li,
+.ul11 li {
+	color: #FFFFFF;
+	height: 45px;
+	width: 5.925vw;
+	line-height: 45px;
+	text-align: center;
+	/* 文本居中 */
+}
+
+/* 红色导航栏第2项覆盖显示列表覆盖事件 */
+.nav2 .ul1 li:hover,
+.nav2 .ul11 li:hover {
+	background-color: #e80f0f;
+}
+
+
+
+/* 红色导航栏下图片 */
+.logo2 {
+	width: 100%;
+	height: 500px;
+	background-color: #ea682c;
+	background-image: linear-gradient(45deg, #e38e4c 0%, #f73721 100%);
+	animation: jb 2s linear infinite;
+}
+
+/* 轮播图片区域 */
+#image-container {
+	width: 79.8%;
+	height: 500px;
+	background-size: cover;
+	background-position: center;
+	margin: 0 auto;
+}
+
+#image-container:hover {
+	opacity: 0.6;
+	/* 鼠标悬停变透明 */
+}
+
+/* 切换图片按钮 */
+.button {
+	background-color: #FFFFFF;
+	background-image: linear-gradient(180deg, #FFFFFF 0%, #dc5f3f 100%);
+	padding: 0.987vw;
+	display: inline;
+	border-radius: 8px;
+	animation: jb 2s linear infinite;
+	/*应用动画*/
+}
+
+.button:hover {
+	background-color: #FFFFFF;
+	background-image: linear-gradient(180deg, #FFFFFF 0%, #c51919 100%);
+	color: rgb(255, 255, 255);
+}
+
+/* 按钮位置 */
+#b1 {
+	position: absolute;
+	top: 450px;
+	left: 2.633vw;
+}
+
+#b2 {
+	position: absolute;
+	top: 450px;
+	left: 92.166vw;
+}
+
+#both{
+	display: flex;
+	flex-wrap: nowrap;
+}
+/* 中央区域大块 */
+.center {
+	height: 2000px;
+	width: 80vw;
+}
+
+/* 左边竖幅 */
+.zhongzuo {
+	margin: 0 6.583vw 0 1.580vw;
+	height: 1600px;
+}
+
+/*  悬停旋转动效 */
+.zhongzuo:hover {
+	transform: rotateY(360deg);
+	transition: all 1.5s linear;
+
+}
+
+/* 右边竖幅 */
+.zhongyou {
+	margin: 0px 24px 0px 80px;
+	height: 1600px;
+	transition: all 1.5s linear;
+}
+
+/*  悬停旋转动效 */
+.zhongyou:hover {
+	transform: rotateY(360deg);
+	transition: all 1.5s linear;
+}
+
+/* 竖幅字体 */
+#left,
+#right {
+	list-style: none;
+	font-size: 52px;
+	text-shadow: #2b2929 0.32916vw 0.32916vw 0.26333vw;
+	font-family: cursive;
+	/*影子效果*/
+}
+
+/* 中央区域all列表 */
+
+.center ul {
+	list-style: none;
+	line-height: 40px;
+}
+
+/* 网页中所有链接去除下划线 */
+.center a {
+	position: relative;
+	text-decoration: none;
+	color: #000000;
+}
+
+/* 设置新闻内容超出部分用...代替 */
+.center li {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/* 理工要闻标题 */
+#yw {
+	display: inline-block;
+	line-height: 50px;
+	color: #8a2020;
+	margin-right: 61.81vw;
+	border-bottom: #8a2020 solid 2px;
+	/* 底部横线 */
+}
+
+
+/* 中央第一排大块 */
+.c1 {
+	height: 300px;
+	margin-bottom: 36px;
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+/* 中央块第一排第一块 */
+.h2-1 {
+	width: 22.515vw;
+	height: 250px;
+	margin-right: 1.58vw;
+}
+
+/* 第二块 */
+.h2-2 {
+	width: 26.65vw;
+	height: 250px;
+	margin-right: 1.58vw;
+}
+
+/* 第三块轮播图 */
+#slideshow {
+	position: relative;
+	height: 280px;
+	overflow: hidden;
+	width: 100%;
+	display: flex;
+}
+
+#slideshow img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.8s linear;
+	display: flex;
+}
+
+#slideshow img.active {
+	opacity: 1;
+}
+
+#buttons {
+	position: relative;
+    top: 100px;
+	left:6vw
+}
+
+#buttons button {
+	padding: 0.526vw 0.79vw;
+	cursor: pointer;
+	border: none;
+	border-radius: 0.329vw;
+	margin-right: 0.329vw;
+}
+
+#buttons button.active {
+	background-color: #333;
+	color: #fff;
+	background-color: #c73e5e;
+}
+
+
+
+/* 中央第二排大区域 */
+.c2 {
+	display: flex;
+	margin-top: 10px;
+	height: 300px;
+}
+
+/*通知公告块 */
+.h3-1 {
+	float: left;
+	height: 290px;
+	width: 24vw;
+}
+
+/* 通知公告标题栏 */
+.m1 {
+	color: #FFFFFF;
+	background: rgb(162, 34, 34);
+	height: 40px;
+	font-size: 25px;
+}
+
+/*通知公告后 更多>>*/
+#m11 {
+	color: #ffffff;
+	font-size: 17px;
+	float: right;
+}
+
+/*日期显示*/
+#ul40 {
+	position: relative;
+	top: -244px;
+	right: -20.5vw;
+	color: #760707;
+}
+
+
+/* 综合新闻块 */
+.h3-2 {
+	float: left;
+	margin-left: 2.63vw;
+	height: 290px;
+	width: 50.5vw;
+}
+
+/* 综合新闻标题 */
+.m2 {
+	color: #FFFFFF;
+	background: rgb(162, 34, 34);
+	font-size: 25px;
+	height: 40px;
+}
+
+/*学术动态后 更多>>*/
+#m21 {
+	color: #ffffff;
+	font-size: 17px;
+	float: right;
+}
+
+/* 第一列新闻 */
+#ul5 {
+	width: 18.6vw;
+	margin-top: 15px;
+	float: left;
+}
+
+/* 时间显示 */
+#ul50 {
+	margin-top: 15px;
+	color: #760707;
+	float: left;
+	margin-left: 2.2vw;
+	margin-right: 2.7vw;
+}
+
+/* 第二列新闻 */
+#ul51 {
+	width: 18.68vw;
+	margin-top: 15px;
+	float: left;
+}
+
+/* 时间显示 */
+#ul52 {
+	margin-top: 15px;
+	color: #760707;
+	margin-left: 2.2vw;
+	float: left;
+}
+
+
+
+/* 中央第三排大块 */
+.c3 {
+	display: flex;
+	margin-top: 1.5vw;
+	height: 300px;
+}
+
+/* 第一块图片 */
+.h4-1 {
+	float: left;
+	height: 290px;
+	width:24.35vw;
+	margin-right: 1.31vw;
+	background: url(http://www.qtech.edu.cn/images/syljs.jpg) no-repeat;
+	background-size: cover;
+	transition: 1.8s linear;
+}
+
+/* 学术动态块 */
+.h4-2 {
+	float: left;
+	width: 26.8vw;
+	height: 300px;
+	margin-right: 1.5vw;
+}
+/*下方轮播块 */
+#container1 {
+	float: left;
+	text-align: center;
+	height: 260px;
+	width: 26.8vw;
+	overflow: hidden;
+/* 	border: rgb(77, 70, 70) solid 1px; */
+  }
+/*每个轮播小块 */
+.item {
+	width: 26vw;
+	height: 60px;
+	margin-bottom: 20px;
+	border-bottom: rgb(77, 70, 70) dashed 1px;
+  }
+ /*小块中左小块 */
+.small{
+	  line-height: 30px;
+	  width: 4vw;
+	  height: 60px;
+	  float: left;
+	  border: rgb(77, 70, 70) dashed 1px;
+  }
+/*小块中左小块上红小块 */
+.smallp{
+	  line-height: 30px;
+	  width: 4vw;
+	  height: 30px;
+	  background: rgb(162, 34, 34);
+  }
+	   
+
+/*专题专栏块*/
+.h4-3 {
+	width: 23vw;
+	float: left;
+	height: 300px;
+}
+
+/*学术动态块/专题专栏块*/
+.m3 {
+	color: #FFFFFF;
+	background: rgb(162, 34, 34);
+	font-size:1.6458vw;
+	margin-bottom: 14px;
+	height: 40px;
+}
+
+/*学术动态后 更多>>*/
+#m31 {
+	color: #ffffff;
+	font-size: 1.1191vw;
+	float: right;
+}
+
+
+/*中央第四排大块*/
+.c4 {
+	display: flex;
+	margin-top: 30px;
+	height: 310px;
+}
+
+/* 第一小块 */
+#c41 {
+	display: flex;
+	float: left;
+	height: 310px;
+	width: 38.4vw;
+	background-color: #FFFFFF;
+	background-image: linear-gradient(90deg, #FFFFFF 0%, #db4444 100%);
+}
+
+/* 文字内容 */
+#u41 {
+	width: 19.7vw;
+	float: left;
+	margin-left: 1.9vw;
+	margin-top: 30px;
+}
+
+/* 日期显示 */
+#u42 {
+	float: left;
+	margin-top: 30px;
+	margin-left: 7.4vw;
+	margin-right: 2.5vw;
+}
+
+/* 媒体理工块 */
+#c42 {
+	position: relative;
+	/* line-height: 300px;*/
+	display: flex;
+	float: left;
+	background-color: #931111;
+	width: 16.4vw;
+	height: 310px;
+	font-size: 1.7vw;
+}
+
+#mtlg {
+	margin: auto;
+}
+
+/* 更多>> */
+#gd {
+	display: block;
+	position: absolute;
+	width:3.5vw;
+	top: 198px;
+	left: 9.44vw;
+}
+
+/*鼠标悬停显示图片*/
+#hoverimg {
+	position: absolute;
+	top: -100px;
+	left: 200px;
+	background: url(http://www.qtech.edu.cn/images/syljs.jpg) no-repeat;
+	background-size: cover;
+	width: 500px;
+	height: 410px;
+	display: none;
+	z-index: 999;
+	animation: cs 3.2s ease-in-out infinite;
+}
+
+#mtlg:hover #hoverimg {
+	display: block;
+}
+
+/* 图片展示 */
+#c43 {
+	float: left;
+	height: 310px;
+	width:22.3vw;
+	background: url(http://www.qtech.edu.cn/images/0420.png) no-repeat;
+	background-size: 100% 100%;  /* 设置图片大小 */
+}
+
+/* 宣传区域 */
+.xc {
+	color: #FFFFFF;
+	height: 310px;
+}
+
+/* 理工文化块 */
+#xc1 {
+	display: flex;
+	float: left;
+	height: 310px;
+	width: 18vw;
+	background-color: #931111;
+}
+
+#xc11 {
+	line-height: 28px;
+	margin: 1.3vw;
+	float: left;
+	font-size: 0.9vw;
+}
+
+/* 图片1 */
+#xc2 {
+	background: url(http://www.qtech.edu.cn/__local/1/09/06/A0B213C31A834031AFA42D0FC9F_93A7D48B_2839A.jpg) no-repeat;
+	background-size: cover;
+	float: left;
+	height: 310px;
+	width: 20.4vw;
+}
+
+/* 图片2 */
+#xc3 {
+	background: url(http://www.qtech.edu.cn/__local/5/D8/89/8AB6B78DE2B1A688CE32D55DB49_F04EB6EC_EBF1C.jpg) no-repeat;
+	background-size: cover;
+	float: left;
+	height: 310px;
+	width: 20.4vw;
+}
+/*微信热点*/
+#xc4 {
+	float: left;
+	height: 310px;
+	width: 18.2vw;
+	background-color: #931111;
+}
+
+#xc41 {
+	line-height: 30px;
+	margin: 1.3vw;
+	float: left;
+}
+
+#xc41 a {
+	font-size: 0.9vw;
+	color: #FFFFFF;
+}
+
+
+/* 链接区域 */
+.lj {
+	align-items: center;
+	position: absolute;
+	top: 2380px;
+	width: 100%;
+	height: 110px;
+	background: url(e.jpg) 177px 31px no-repeat;
+	background-size: 10%;
+}
+
+.lj select {
+	width: 9.8vw;
+}
+
+.lj>div {
+	float: right;
+	margin-right: 7.2vw;
+	margin-top: 50px;
+}
+
+/* 最后一栏 */
+#footer {
+	position: absolute;
+	top: 2480px;
+	width: 100%;
+	height: 300px;
+	background: url(tu3.png) no-repeat;
+	background-size: cover;
+}
+
+@media(max-width:992){
+.zhongyou{
+	display: none;
+}
+}
+/* 动画渐变效果 */
+@keyframes jb {
+	0% {
+		background-color: #FFFFFF;
+		background-image: linear-gradient(180deg, #FFFFFF 0%, #dc5f3f 100%);
+	}
+
+	50% {
+		background-color: #FFFFFF;
+		background-image: linear-gradient(180deg, #FFFFFF 0%, #bb4560 100%);
+	}
+
+	100% {
+		background-color: #FFFFFF;
+		background-image: linear-gradient(180deg, #FFFFFF 0%, #dc5f3f 100%);
+	}
+}
+
+@keyframes cs {
+	0% {
+	
+		transform: translateX(-500px);
+
+	}
+30%{
+	transform: translateY(-500px); 
+	transform: rotate(360deg);
+}
+	
+
+60%{
+	transform: translateX(-500px); 
+	transform: rotate(260deg);
+}
+	100% {
+		transform: translateX(-500px); 
+	
+	}
+}

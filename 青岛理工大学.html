@@ -1,0 +1,515 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>青岛理工大学</title>
+  <link rel="stylesheet" type="text/css" href="青岛理工大学CSS.css">
+</head>
+
+
+
+<body>
+<!-- 页眉 -->
+  <header id="header">
+
+  <div class="nav1">
+    <span id="clock"></span>
+<script>
+  function clock() {
+    var time = new Date();
+    var week;
+    switch (time.getDay()) {
+      case 1: week = "星期一"; break;
+      case 2: week = "星期二"; break;
+      case 3: week = "星期三"; break;
+      case 4: week = "星期四"; break;
+      case 5: week = "星期五"; break;
+      case 6: week = "星期六"; break;
+      default: week = "星期天";
+    }
+    var year = time.getFullYear();
+    var month = time.getMonth();
+    var date = time.getDate();
+    var hour = time.getHours();
+    var min = time.getMinutes();
+    var sec = time.getSeconds();
+    min = min < 10?"0" + min:min; //若当前分钟数小＜10，则前方连接字符串0    
+    sec =sec < 10? "0" + sec:sec;  //若当前秒数小＜10，则前方连接字符串0
+   
+    var d1 = date.toLocaleString();
+    document.getElementById("clock").innerHTML = "今日时间:" + "&nbsp;&nbsp;&nbsp;" + year + "年" + (month + 1)
+      + "月" + date + "日" + week + hour + ":" + min + ":" + sec;
+  }
+  setInterval(clock, 1000);    /* 每隔1秒显示一次 */
+</script>
+
+    <ul class="a1">
+      <li><a>教职工</a></li>
+      <li><a>在校生</a></li>
+      <li><a>English</a></li>
+      <li><a>设为首页</a></li>
+      <li><a style="height: 40px">加入收藏</a>
+        <ul class="ul0">
+          <li>默认收藏</li>
+          <li>指定收藏</li>
+          <li>新建收藏</li>
+        </ul></li>
+    </ul>
+  </div>
+
+  <div class="logo1">
+    <form class="search" action="##">
+      <input type="search" name="search">
+    </form>
+  </div>
+
+  <div class="nav2">
+    <ul>
+      <li>
+        &nbsp;&nbsp; &nbsp;<a href="http://www.qtech.edu.cn/index.htm">首页</a>
+      </li>
+      <li>
+        <a href="http://www.qtech.edu.cn/xqzl.htm">校情总览</a>
+        <ul class="ul1">
+          <li>学校概况</li>
+          <li>历史沿革</li>
+          <li>历任领导</li>
+          <li>现任领导</li>
+          <li>学校标志</li>
+          <li>临沂校区</li>
+        </ul>
+      </li>
+      <li>
+        <a href="##">组织机构</a>
+      </li>
+      <li>
+        <a href="##">院部设置</a>
+      </li>
+      <li>
+        <a href="##">师资队伍</a>
+      </li>
+      <li>
+        <a href="##">教育教学</a>
+      </li>
+      <li>
+        <a href="##">科学研究</a>
+        <ul class="ul11">
+          <li>科研项目</li>
+          <li>科研机构</li>
+          <li>科研成果</li>
+          <li>学术期刊</li>
+        </ul>
+      </li>
+      <li>
+        <a href="##">招生就业</a>
+      </li>
+      <li>
+        <a href="##">国际交流</a>
+      </li>
+      <li>
+        <a href="##">公共服务</a>
+      </li>
+      <li>
+        <a href="##">校园生活</a>
+      </li>
+      <li>
+        <a href="##">理工新闻</a>
+      </li>
+    </ul>
+
+  </div>
+
+
+  <div class="logo2">
+    <div class="button" id="b1">上一张</div>
+    <div id="image-container"></div>
+    <div class="button" id="b2">下一张</div>
+
+  </div>
+  <script>
+  var currentImageIndex = 0; // 当前显示图片的索引
+  var images = ["http://www.qtech.edu.cn/images/20221016003.jpg", "http://www.qut.edu.cn/images/3322.jpg",
+   "http://www.qut.edu.cn/images/20230330114328.png", "http://www.qtech.edu.cn/images/0010804.jpg",
+   "http://www.qut.edu.cn/images/wmxy.jpg"]; // 图片数组
+  window.onload = function () {
+    var imageContainer = document.getElementById("image-container");
+    imageContainer.style.backgroundImage = "url('" + images[currentImageIndex] + "')"; // 初始化第一张图片
+    var prevButton = document.getElementById("b1");
+    var nextButton = document.getElementById("b2");
+    // 监听点击事件
+    prevButton.addEventListener('click', function () {
+      currentImageIndex = currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1;
+      imageContainer.style.backgroundImage = "url('" + images[currentImageIndex] + "')"; // 切上一张图片
+    });
+    nextButton.addEventListener('click', function () {
+      currentImageIndex = currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1;
+      imageContainer.style.backgroundImage = "url('" + images[currentImageIndex] + "')"; // 切下一张图片
+    });
+  } 
+</script>
+
+</header>
+
+<!--中央大块-->
+<div id="both">
+
+<!--中左-->
+    <aside class="zhongzuo">
+      <ul id="left">
+        <br>
+        <li>百</li>
+        <li>折</li>
+        <li>不</li>
+        <li>挠</li><br>
+
+        <li>刚</li>
+        <li>毅</li>
+        <li>厚</li>
+        <li>重</li><br>
+
+        <li>勇</li>
+        <li>承</li>
+        <li>重</li>
+        <li>载</li><br>
+      </ul>
+    </aside>
+
+
+    <!--内容区域-->
+  <section class="center">
+
+    <div>
+      <h2 id="yw">理工要闻</h1>
+        <a href="##" style="text-decoration: none;color: black">更多>></a>
+        <hr>
+    </div>
+
+    <div class="c1">
+      <div class="h2-1">
+        <ul id="ul2">
+          <strong>
+            <li><a href="http://www.qtech.edu.cn/info/1050/23566.htm" title="学校召开本科教学工作会议">学校召开本科教学工作会议</a></li>
+          </strong>
+          <li><a title="学校党委理论学习中心组进行集体学习研讨 学校党委理论学习中心组进行集体学习研讨">学校党委理论学习中心组进行集体学习研讨 学校党委理论学习中心组进行集体学习研讨 </a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1050/23566.htm">学校召开2021年就业工作专项会议</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1050/23525.htm">山东省高等学校蓝色经济区工程建设与安全示范协同发展</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1050/23523.htm">学校举办2021年体育运动赛事表彰大会</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1050/23514.htm">党委副书记李国华到临沂校区土木与建筑工程系宣讲</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1050/23695.htm">学校举办廉洁教育报告会</a></li>
+        </ul>
+      </div>
+
+      <div class="h2-2">
+        <ul id="ul3">
+          <strong>
+            <li><a href="http://www.qtech.edu.cn/info/1051/23408.htm" title="学校党委常委会“第一议题”专题学习党的十九届六中全会公报">学校党委常委会“第一议题”专题学习党的十九届六中全会公报</a></li>
+          </strong>
+          <li><a title="学校党委理论学习中心组专题学习党的十九届六中全会精神" href="http://www.qtech.edu.cn/info/1051/23458.htm">学校党委理论学习中心组专题学习党的十九届六中全会精神</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23736.htm">我校学子在“TI杯”全国大学生电子设计竞赛中再获佳绩</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23725.htm">校团委荣获“第七届山东科普奖先进集体”荣誉称号</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23709.htm">我校第十四届中青年教师讲课比赛暨教学观摩活动圆满落幕</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23704.htm">临沂校区师生在第四届山东一代信息技术应用大赛中斩获佳绩</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23666.htm">学校召开2021年第五十五次党委常委会</a></li>
+        </ul>
+      </div>
+
+      <div id="slideshow"> 
+         <img src="http://www.qtech.edu.cn/__local/2/A0/01/158289279A409AFECBA22D951D2_C63D2E35_151AB.jpg">
+         <img src="http://www.qtech.edu.cn/__local/0/5C/91/EC41C56C02C8D3F1CD95AFB191D_1BF3A6D3_14CB1.jpg">
+         <img src="http://www.qtech.edu.cn/__local/A/5A/8C/90464A853A4BD1B2F5258BCF715_794F58D9_15EE2.jpg"> 
+         <img src="http://www.qtech.edu.cn/__local/E/6E/7C/81A1088BB1CE42992F95E962885_5E3724AB_14C87.jpg">
+
+          <div id="buttons">
+        <button onmouseover="showSlide(1)">1</button>
+        <button onmouseover="showSlide(2)">2</button>
+        <button onmouseover="showSlide(3)">3</button>
+        <button onmouseover="showSlide(4)">4</button>
+      </div>
+
+      </div>
+  
+    
+   
+    <script>
+      var slideIndex = 1;
+showSlide(slideIndex);
+function showSlide(n) {
+  var slides = document.getElementById("slideshow").getElementsByTagName("img");
+  var buttons = document.getElementById("buttons").getElementsByTagName("button");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].classList.remove("active");
+  }
+  slides[slideIndex - 1].classList.add("active");
+  buttons[slideIndex - 1].classList.add("active");
+}
+var intervalId = setInterval(function() {
+  slideIndex++; 
+  showSlide(slideIndex);
+}, 3000);
+var buttons = document.getElementById("buttons").getElementsByTagName("button");
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("mouseover", function() {
+    clearInterval(intervalId);
+    slideIndex = parseInt(this.innerHTML);
+    showSlide(slideIndex);
+  });
+}
+document.getElementById("slideshow").addEventListener("mouseover", function() {
+  clearInterval(intervalId);
+});
+document.getElementById("slideshow").addEventListener("mouseout", function() {
+  intervalId = setInterval(function() {
+    slideIndex++;
+    showSlide(slideIndex);
+  }, 3000);
+});
+    </script>
+
+</div><!-- c1 -->
+
+    <div class="c2">
+      <div class="h3-1">
+        <div class="m1">通知公告
+          <a id="m11" href="##" style="color: rgb(255, 252, 252)">更多>></a>
+        </div>
+      
+        <ul id="ul4">
+          <li><a title="黄岛校区校园网暂时停用通知" href="http://www.qtech.edu.cn/info/1051/23408.htm">黄岛校区校园网暂时停用通知</a></li>
+          <li><a href="##">关于黄岛校区本月停电通知</a></li>
+          <li><a href="##">关于做好2022年度工作总结工作示范</a></li>
+          <li><a href="##">青岛理工大学档案征集倡议工作决议</a></li>
+          <li><a href="##">关于召开青岛理工大学本科教学工作</a></li>
+          <li><a href="##">关于组织收看“青岛楷模”发布仪式有感</a></li>
+        </ul>
+        <ul id="ul40">
+          <li>04-03</li>
+          <li>04-04</li>
+          <li>04-05</li>
+          <li>04-06</li>
+          <li>04-07</li>
+          <li>04-08</li>
+        </ul>
+      </div>
+
+      <div class="h3-2">
+        <div class="m2">综合新闻<a href="##" id="m21">更多>></a></div>
+        <div style="display: flex;justify-content: space-between">
+        <ul id="ul5">
+          <li><a title="商学院研究生二支部开展“铭记苦难历史，争做新时代励志青年”" href="http://www.qtech.edu.cn/info/1051/23408.htm">商学院研究生二支部开展“铭记苦难历史，争做新时代励志青年”</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23736.htm">土木工程学院举行国家公祭日升国旗仪式</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23736.htm">信息与控制工程学院学生在山东省高校机遇发展座谈会</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23725.htm">学校成功举办2021星级文明标兵宿舍、公寓选拔大赛</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23709.htm">土木工程学院召开思政导师座谈交流会</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23704.htm">商学院、合作发展处赴青岛农业大学管理学院视察</a></li>
+        </ul>
+        <ul id="ul50">
+          <li>04-03</li>
+          <li>04-04</li>
+          <li>04-05</li>
+          <li>04-06</li>
+          <li>04-07</li>
+          <li>04-08</li>
+        </ul>
+        <ul id="ul51">
+          <li><a title="商学院研究生二支部开展“铭记苦难历史，争做新时代励志青年">商学院研究生二支部开展“铭记苦难历史，争做新时代励志青年”</a></li>
+          <li><a title="商学院研究生二支部开展“铭记苦难历史，争做新时代励志青年”">土木工程学院举行国家公祭日升国旗仪式</a></li>
+          <li><a title="信息与控制工程学院学生在山东省高校机遇发展座谈会">信息与控制工程学院学生在山东省高校机遇发展座谈会</a></li>
+          <li><a title="学校成功举办2021星级文明标兵宿舍、公寓选拔大赛">学校成功举办2021星级文明标兵宿舍、公寓选拔大赛</a></li>
+          <li><a title="土木工程学院召开思政导师座谈交流会">土木工程学院召开思政导师座谈交流会</a></li>
+          <li><a title="商学院、合作发展处赴青岛农业大学管理学院视察">商学院、合作发展处赴青岛农业大学管理学院视察</a></li>
+        </ul>
+        <ul id="ul52">
+          <li>04-03</li>
+          <li>04-04</li>
+          <li>04-05</li>
+          <li>04-06</li>
+          <li>04-07</li>
+          <li>04-08</li>
+        </ul></div>
+      </div>
+    </div><!-- c2 -->
+
+    <div class="c3">
+      <div class="h4-1"></div>
+
+      <div class="h4-2">
+        <div class="m3">学术动态<a href="##" id="m31">更多>></a></div>
+        <div id="container1">
+          <div class="item">
+              <div class="small"><div class="smallp">27</div>2022-1</div><h4>建筑与城乡规划学院举行“筑之韵”讲堂第239讲之修复传习的当代实践探索</h4>
+          </div>
+
+          <div class="item">
+              <div class="small"><div class="smallp">28</div>2023-2</div><h4>学校物理学术高端论坛暨第四节届理文化节开幕</h4>
+          </div>
+
+          <div class="item">
+              <div class="small"><div class="smallp">29</div>2023-3</div><h4>我校成功承办2021年世界华人建筑师大会</h4>
+          </div>
+
+          <div class="item">
+              <div class="small"><div class="smallp">30</div>2023-4</div><h4>我校成功承办2022年全国地质工程师技术年讨会</h4>
+          </div>
+
+          <div class="item">
+              <div class="small"><div class="smallp">31</div>2023-5</div><h4>艺术与设计学院举办讲座会</h4>
+          </div>
+
+          <div class="item">
+              <div class="small"><div class="smallp">32</div>2023-6</div><h4>学校召开点位申报总结暨下一位学位点申报启动会</h4>
+          </div>
+
+        </div>
+      </div>
+      <script>
+        var container = document.getElementById('container1');
+        var items = container.getElementsByClassName('item');
+        var currentIndex = 0;
+        function slide() {
+          var nextIndex = currentIndex + 1;  //每次刷新新增一块
+          if (nextIndex > items.length) {
+            nextIndex = 0;
+          }
+          for (var i = 0; i < items.length; i++) {
+            if (i >= nextIndex && i < nextIndex + 3) { //一次最多容纳的块数 
+              items[i].style.display = 'block';
+            } else {
+              items[i].style.display = 'none';
+            }
+          }
+          currentIndex = nextIndex;
+        }
+        setInterval(slide, 1200);
+           </script>
+
+
+      <div class="h4-3">
+        <div class="m3">专题专栏</div>
+        <ul id="ul6">
+          <li><a title="管理工程学院举办“勿忘国耻、砥砺前行管理工程学院举办“勿忘国耻、砥砺前行" href="http://www.qtech.edu.cn/info/1051/23408.htm">管理工程学院举办“勿忘国耻、砥砺前行管理工程学院举办“勿忘国耻、砥砺前行</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23458.htm">建筑与城乡规划学院开展“国家公祭日”活动</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23736.htm">信息与控制工程学院举办网络舆情应对处活动</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23725.htm">我校现代产业学院学子喜获“创新大赛”一等奖</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23709.htm">建筑与城乡规划学院学子在第十一届“佰天风斗”大赛</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23704.htm">体育教学部举办“喜迎冬奥，强国有我”项目</a></li>
+        </ul>
+      </div>
+    </div><!-- c3 -->
+    <div class="c4">
+      <div id="c41">
+        <ul id="u41">
+          <li><a title="商学院研究生二支部开展“铭记苦难历史,争做时代楷模”活动">商学院研究生二支部开展“铭记苦难历史,争做时代楷模”活动</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23458.htm">土木工程学院举行国家公祭日升国旗仪式</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23736.htm">信息与控制工程学院学生在山东省高校机遇发展协会中取得重大成就</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23725.htm">学校成功举办2021星级文明标兵宿舍、公共校区活动</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23709.htm">土木工程学院召开思政导师座谈交流会</a></li>
+          <li><a href="http://www.qtech.edu.cn/info/1051/23704.htm">商学院、合作发展处赴青岛农业大学管理学院学习</a></li>
+        </ul>
+        <ul id="u42">
+          <li>2023-04-03</li>
+          <li>2023-04-04</li>
+          <li>2023-04-05</li>
+          <li>2023-04-06</li>
+          <li>2023-04-07</li>
+          <li>2023-04-08</li>
+        </ul>
+      </div>
+      <div id="c42">
+        <div id="mtlg">      
+      <!-- 隐藏图片块 --> 
+      <div id="hoverimg"></div>
+      <h1 style="color:aliceblue;border-bottom: #ffffff solid 2px;line-height: 60px">媒体理工</h1>    </div>
+  
+        <a href="##" id="gd" style="color: #ffffff">更多>></a>
+  
+      </div>
+
+    <!-- 第三块图片显示 -->
+      <div id="c43"></div>
+
+    </div><!-- c4 -->
+
+    <div class="xc">
+      <div id="xc1">
+        <div id="xc11">
+        <h1 style="display: inline">理工文化</h1>
+        <a href="##" style="color: #ffffff;float: right">更多>></a><br>
+        <br>
+        <p>青岛理工大学是一所以工为主，理工结合，土木建筑、机械制造、环境能源学科特色鲜明，
+          理、工、经、管、文、法、艺多学科协调发展，科学教育与人文教育相结合的多科性大学。
+          学校是山东省重点建设的应用基础型人才培养特色名校。
+          </p>
+      </div>
+      </div>
+
+      <div id="xc2"></div>
+      <div id="xc3"></div>
+      <div id="xc4">
+        <div id="xc41">
+          <h1 style="display: inline">微信热点</h1>
+          <a href="##" style="color: #ffffff;float: right">更多>></a><br><br>
+          <p><a href="##">校花带你看校～花</a><br>
+           <a href="##">什么？面试也能共享？！</a> <br>
+           <a href="##">“研”值拉满，全员上岸！</a> <br>
+           <a href="##"> 大事件！规章制度落实年！</a><br>
+            <a href="##">李强主持召开国务院常务会议,决定延..</a><br>
+              <a href="##">系统已开！四步上岸！</a>
+            </p>
+        </div>
+      </div>
+    </div><!-- xc -->
+
+  </section><!-- center -->
+<!--中右-->
+    <aside class="zhongyou">
+      <ul id="right">
+        <br>
+        <li>严</li>
+        <li>谨</li><br><br>
+
+        <li>勤</li>
+        <li>奋</li><br><br>
+
+        <li>求</li>
+        <li>实</li><br><br>
+
+        <li>创</li>
+        <li>新</li>
+
+      </ul>
+    </aside>
+</div><!-- both -->
+
+
+  <div class="lj">
+
+    <div><select name="se">
+        <option value="lj">--相关链接--</option>
+      </select></div>
+    <div><select name="se1">
+        <option value="1j1">--相关链接--</option>
+      </select></div>
+    <div><select name="se2">
+        <option value="lj2">--相关链接--</option>
+      </select></div>
+   <div> <select name="se3">
+      <option value="lj3">--相关链接--</option>
+    </select></div>
+
+  </div>
+
+  <footer id="footer"></footer>
+
+</body>
+
+</html>
